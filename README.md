@@ -30,15 +30,19 @@ _Note: For sake of simplicity, the architecture uses sparse events and no data r
     ```bash
     cd aws-eda-demo
     ```
-3. Update the notification email in `lib/aws-eda-demo-stack.js`
+3. Replace the email placeholder your email in `lib/aws-eda-demo-stack.js`
     ```javascript
     const EMAIL = 'username@company.com'; 
     ```
-4. Deploy the CDK project
+4. Install the project dependencies
+    ```bash
+    npm install
+    ```
+5. Deploy the CDK project
     ```bash
     cdk deploy
     ```
-5. Check your email and click in the `Confirm subscription` link
+6. Check your email and click in the `Confirm subscription` link
 
 ## Create Payment Service
 
