@@ -9,6 +9,14 @@ const eventMapping = new Map([
     ['PaymentFailed', 'OrderCancelled']
 ]);
 
+/**
+ * Sample Lambda function that persist orders in DynamoDB and publish events in EventBridge.
+ *
+ * DISCLAIMER: This code doesn't handle atomicity between the two operations for the sake of simplicity, so isn't intended to be used in production.
+ *
+ * @param event
+ * @returns {Promise<{statusCode: number}>}
+ */
 exports.handler = async (event) => {
     //console.log("Received event: ", JSON.stringify(event, null, 2));
 

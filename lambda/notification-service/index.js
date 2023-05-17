@@ -4,7 +4,12 @@ const snsClient = new SNSClient();
 
 const NOTIFICATION_TOPIC_ARN = process.env.NOTIFICATION_TOPIC_ARN;
 
-
+/**
+ * Sample Lambda function that routes events to user through SNS.
+ *
+ * @param event
+ * @returns {Promise<{statusCode: number}>}
+ */
 exports.handler = async (event) => {
      const input = {
          Message: JSON.stringify({
